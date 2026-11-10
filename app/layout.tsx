@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={clsx(Satoshi.className, "antialiased")}>
+    <html lang="en" className={clsx(Satoshi.className, "scrollbar-gutter-stable antialiased")}>
       <body>
         <main className="min-h-svh">{children}</main>
       </body>

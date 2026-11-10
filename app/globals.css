@@ -1,1 +1,73 @@
 @import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+  --color-black: hsl(0, 0%, 11%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-stroke: hsl(0, 0%, 91%);
+  --color-primary: hsl(0, 0%, 98%);
+  --color-primary-darker: hsl(0, 0%, 96%);
+  --color-secondary: hsl(0, 0%, 34%);
+  --color-ghost: hsl(0, 0%, 25%);
+  --color-disabled: hsl(0, 0%, 73%);
+  --color-accent: hsl(358, 75%, 50%);
+  --color-accent-lighter: hsl(358, 87%, 60%);
+  --color-accent-darker: hsl(358, 75%, 40%);
+  --color-stroke-accent: hsl(358, 80%, 42%);
+  --color-stroke-highlight: hsla(218, 81%, 52%, 0.35);
+
+  --spacing-*: initial;
+  --spacing-120: 120px;
+  --spacing-80: 80px;
+  --spacing-60: 60px;
+  --spacing-40: 40px;
+  --spacing-32: 32px;
+  --spacing-24: 24px;
+  --spacing-16: 16px;
+  --spacing-12: 12px;
+  --spacing-8: 8px;
+
+  --text-*: initial;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 40px;
+  --text-4xl: 44px;
+  --text-5xl: 60px;
+
+  --leading-*: initial;
+  --leading-1: 1;
+  --leading-1.1: 1.1;
+
+  --breakpoint-*: initial;
+  --breakpoint-desktop: 1200px;
+  --breakpoint-tablet: 810px;
+
+  --radius-card: 28px;
+  --shadow-navbar: 0px 0px 16px 8px hsla(0, 0%, 0%, 0.08);
+}
+
+@utility app-container {
+  width: calc(100% - 32px);
+  margin-inline: auto;
+  max-width: 1344px;
+  @variant tablet {
+    width: calc(100% - 64px);
+  }
+  @variant desktop {
+    width: calc(100% - 96px);
+  }
+}
+
+@utility full-bleed {
+  width: 100vw;
+  margin-inline-start: calc(50% - 50vw);
+}
+
+@utility focus-ring {
+  @variant focus-visible {
+    @apply ring-stroke-highlight ring-2 ring-offset-1 outline-none;
+  }
+}
