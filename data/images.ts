@@ -7,7 +7,7 @@ export function placeholderImage(
   background = "f7f7f7",
 ): MediaWithAlt {
   return {
-    src: `https://placehold.co/${width}x${height}/${background}/292929/png?text=${encodeURIComponent(alt)}`,
+    src: `https://placehold.co/${width}x${height}/${background}/292929/png`,
     alt,
   };
 }

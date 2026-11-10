@@ -42,7 +42,7 @@ export type ProductPreview = Pick<
 >;
 
 export type HomepageHeroSection = {
-  title?: string;
+  title: string;
   subtitle?: string;
   cta?: Cta;
   image: MediaWithAlt;
