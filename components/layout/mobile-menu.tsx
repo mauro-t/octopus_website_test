@@ -22,7 +22,7 @@ export default function MobileMenu() {
           }
         />
       </div>
-      <Collapsible.Panel className="h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-350 data-ending-style:h-[0px] data-starting-style:h-[0px]">
+      <Collapsible.Panel className="h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-350 data-ending-style:h-0 data-starting-style:h-0">
         <ul className="space-y-8 pt-16">
           {navItems.map((item) => (
             <li key={item.id}>

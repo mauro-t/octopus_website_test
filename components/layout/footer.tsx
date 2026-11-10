@@ -3,8 +3,8 @@ import LogoAndTypeSm from "../logo/logo-and-type-sm";
 
 export default function Footer() {
   return (
-    <div className="app-container desktop:pt-60 pt-[48px] pb-24 leading-1">
-      <div className="tablet:flex-row flex flex-col justify-between gap-[48px]">
+    <div className="app-container desktop:pt-60 pt-48 pb-24 leading-1">
+      <div className="tablet:flex-row flex flex-col justify-between gap-48">
         <Link href="/" className="focus-ring">
           <LogoAndTypeSm className="w-[100px]" />
         </Link>
