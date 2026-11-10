@@ -10,7 +10,7 @@ export default function Footer() {
         </Link>
         <article className="tablet:flex-row flex flex-col gap-60">
           <section className="flex flex-col">
-            <h4 className="font-bold">Our products</h4>
+            <h2 className="font-bold">Our products</h2>
             <div className="tablet:grid-cols-2 tablet:mt-auto tablet:gap-y-16 mt-40 grid grid-cols-1 gap-x-24 gap-y-24">
               <Link href="#" className="focus-ring">
                 Kitchen
@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
           </section>
           <section className="flex flex-col">
-            <h4 className="font-bold">Learn</h4>
+            <h2 className="font-bold">Learn</h2>
             <div className="tablet:mt-auto tablet:gap-y-16 mt-40 grid grid-cols-1 gap-y-24">
               <Link href="#" className="focus-ring">
                 Where to buy
