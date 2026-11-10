@@ -34,11 +34,12 @@
   --text-md: 18px;
   --text-lg: 20px;
   --text-xl: 24px;
-  --text-2xl: 32px;
-  --text-3xl: 40px;
-  --text-4xl: 44px;
-  --text-5xl: 48px;
-  --text-6xl: 60px;
+  --text-2xl: 28px;
+  --text-3xl: 32px;
+  --text-4xl: 40px;
+  --text-5xl: 44px;
+  --text-6xl: 48px;
+  --text-7xl: 60px;
 
   --leading-*: initial;
   --leading-1: 1;

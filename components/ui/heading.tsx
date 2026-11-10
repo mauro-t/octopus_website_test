@@ -17,11 +17,11 @@ type Props = {
 
 const variantClasses: Record<Variant, { title: string; subtitle: string }> = {
   primary: {
-    title: "text-3xl tablet:text-5xl desktop:text-6xl",
+    title: "text-4xl tablet:text-6xl desktop:text-7xl",
     subtitle: "text-md tablet:text-lg desktop:text-xl mt-12",
   },
   secondary: {
-    title: "text-2xl tablet:text-3xl desktop:text-4xl",
+    title: "text-3xl tablet:text-4xl desktop:text-5xl",
     subtitle: "text-md tablet:text-lg desktop:text-xl mt-8",
   },
 };
