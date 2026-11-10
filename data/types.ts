@@ -7,13 +7,18 @@ export type Category = {
   label: string;
 };
 
-export type MediaWithAlt = {
+export type MediaSource = {
   src: string;
+  width: number;
+  height: number;
+};
+
+export type MediaWithAlt = MediaSource & {
   alt: string;
   sources?: {
-    media: string;
-    srcSet: string;
-  }[];
+    tablet: MediaSource;
+    desktop: MediaSource;
+  };
 };
 
 export type ProductColour = {

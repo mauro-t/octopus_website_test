@@ -1,4 +1,12 @@
-import type { MediaWithAlt } from "./types";
+import type { MediaSource, MediaWithAlt } from "./types";
+
+function placeholderSource(width: number, height: number, background: string): MediaSource {
+  return {
+    src: `https://placehold.co/${width}x${height}/${background}/292929/png`,
+    width,
+    height,
+  };
+}
 
 export function placeholderImage(
   alt: string,
@@ -7,7 +15,7 @@ export function placeholderImage(
   background = "f7f7f7",
 ): MediaWithAlt {
   return {
-    src: `https://placehold.co/${width}x${height}/${background}/292929/png`,
+    ...placeholderSource(width, height, background),
     alt,
   };
 }
@@ -19,17 +27,11 @@ export function responsivePlaceholderImage(
   mobileSize: [width: number, height: number],
   background = "f7f7f7",
 ): MediaWithAlt {
-  const desktop = placeholderImage(`${alt} - desktop`, ...desktopSize, background);
-  const tablet = placeholderImage(`${alt} - tablet`, ...tabletSize, background);
-  const mobile = placeholderImage(`${alt} - mobile`, ...mobileSize, background);
-
   return {
-    src: mobile.src,
-    alt,
-    // Il primo source compatibile viene selezionato; src copre il mobile (< 810px).
-    sources: [
-      { media: "(min-width: 1200px)", srcSet: desktop.src },
-      { media: "(min-width: 810px)", srcSet: tablet.src },
-    ],
+    ...placeholderImage(alt, ...mobileSize, background),
+    sources: {
+      tablet: placeholderSource(...tabletSize, background),
+      desktop: placeholderSource(...desktopSize, background),
+    },
   };
 }
