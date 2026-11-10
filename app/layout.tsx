@@ -3,6 +3,7 @@ import clsx from "clsx";
 import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
 
 const Satoshi = localFont({
   src: "../assets/font/Satoshi-Variable.woff2",
@@ -24,6 +25,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Navbar />
         </header>
         <main className="app-container min-h-svh">{children}</main>
+        <footer className="bg-accent text-white">
+          <Footer />
+        </footer>
       </body>
     </html>
   );
