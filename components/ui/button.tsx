@@ -16,7 +16,7 @@ const variantClasses: Record<Variant, string> = {
   primary:
     "bg-accent border-stroke-accent focus-visible:bg-accent-lighter hover:bg-accent-lighter active:bg-accent-darker disabled:bg-primary-darker disabled:text-disabled disabled:border-primary-darker aria-disabled:bg-primary-darker aria-disabled:text-disabled aria-disabled:border-primary-darker text-white",
   secondary:
-    "border-stroke hover:bg-primary active:bg-primary-darker disabled:bg-primary-darker disabled:text-disabled aria-disabled:bg-primary-darker aria-disabled:text-disabled",
+    "border-stroke bg-white hover:bg-primary active:bg-primary-darker disabled:bg-primary-darker disabled:text-disabled aria-disabled:bg-primary-darker aria-disabled:text-disabled",
   ghost:
     "text-ghost hover:text-black focus-visible:text-black active:text-black disabled:text-disabled aria-disabled:text-disabled",
 };
