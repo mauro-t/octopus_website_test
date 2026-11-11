@@ -102,7 +102,10 @@ export const productCatalog = {
       "A powerful countertop blender for smoothies, frozen drinks and everyday recipes.",
     image: placeholderImage("Octopus Countertop Blender", 800, 1000),
     bestSeller: false,
-    colours: [{ label: "Black", hex: "#000000" }],
+    colours: [
+      { label: "Black", hex: "#000000" },
+      { label: "White", hex: "#ffffff" },
+    ],
     specs: [
       {
         title: "Technical specifications",
