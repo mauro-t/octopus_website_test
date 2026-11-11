@@ -8,7 +8,7 @@ type Props = {
 
 export default function BestsellerCard({ product }: Props) {
   return (
-    <article className="desktop:w-[1048px] tablet:w-[688px] bg-primary rounded-card tablet:grid-cols-2 grid w-xs grid-cols-1 items-center gap-32 overflow-hidden">
+    <article className="desktop:w-[1048px] tablet:w-[688px] bg-primary rounded-card tablet:grid-cols-2 grid min-h-full w-xs grid-cols-1 items-center gap-32 overflow-hidden">
       <div className="desktop:pl-80 tablet:pl-60 not-tablet:pr-24 not-tablet:pt-32 not-tablet:text-center pl-24">
         <p className="text-md text-accent">{product.category.label}</p>
         <h3 className="tablet:text-2xl desktop:text-3xl leading-1.1 mt-16 text-xl font-bold">
@@ -30,6 +30,7 @@ export default function BestsellerCard({ product }: Props) {
         src={product.image.src}
         alt={product.image.alt}
         sizes="(min-width: 810px) 33vw, 100vw"
+        draggable={false}
       />
     </article>
   );
