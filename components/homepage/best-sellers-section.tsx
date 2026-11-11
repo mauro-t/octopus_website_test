@@ -1,6 +1,6 @@
 import type { BestSellersSection } from "@/data/types";
 import Carousel from "../ui/carousel";
-import BestsellerCard from "../ui/bestseller-card";
+import BestsellerCard from "../ui/best-seller-card";
 
 type Props = {
   section: BestSellersSection;
