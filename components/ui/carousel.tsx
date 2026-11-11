@@ -66,7 +66,7 @@ export default function Carousel({ slides }: Props) {
     <div ref={viewportRef} className="full-bleed overflow-hidden">
       <motion.div
         ref={trackRef}
-        className="carousel-track-padding grid min-w-fit touch-pan-y auto-cols-auto grid-flow-col"
+        className="px-page-gutter grid min-w-fit touch-pan-y auto-cols-auto grid-flow-col"
         drag="x"
         style={{ x }}
         dragConstraints={{ left: -maxDrag, right: 0 }}

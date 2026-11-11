@@ -1,6 +1,21 @@
 @import "tailwindcss";
 
-@theme {
+@layer base {
+  :root {
+    --page-gutter: 16px;
+    --page-max-w: 1344px;
+
+    @variant tablet {
+      --page-gutter: 32px;
+    }
+
+    @variant desktop {
+      --page-gutter: 48px;
+    }
+  }
+}
+
+@theme inline {
   --color-*: initial;
   --color-black: hsl(0, 0%, 11%);
   --color-white: hsl(0, 0%, 100%);
@@ -28,6 +43,7 @@
   --spacing-12: 12px;
   --spacing-8: 8px;
   --spacing-0: 0px;
+  --spacing-page-gutter: max(var(--page-gutter), calc((100vw - var(--page-max-w)) / 2));
 
   --text-*: initial;
   --text-base: 16px;
@@ -54,27 +70,9 @@
 }
 
 @utility app-container {
-  width: calc(100% - 32px);
+  width: calc(100% - (var(--page-gutter) * 2));
   margin-inline: auto;
-  max-width: 1344px;
-  @variant tablet {
-    width: calc(100% - 64px);
-  }
-  @variant desktop {
-    width: calc(100% - 96px);
-  }
-}
-
-@utility carousel-track-padding {
-  padding-inline: max(16px, calc((100vw - 1344px) / 2));
-
-  @variant tablet {
-    padding-inline: max(32px, calc((100vw - 1344px) / 2));
-  }
-
-  @variant desktop {
-    padding-inline: max(48px, calc((100vw - 1344px) / 2));
-  }
+  max-width: var(--page-max-w);
 }
 
 @utility full-bleed {
