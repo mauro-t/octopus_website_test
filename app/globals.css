@@ -65,6 +65,18 @@
   }
 }
 
+@utility carousel-track-padding {
+  padding-inline: max(16px, calc((100vw - 1344px) / 2));
+
+  @variant tablet {
+    padding-inline: max(32px, calc((100vw - 1344px) / 2));
+  }
+
+  @variant desktop {
+    padding-inline: max(48px, calc((100vw - 1344px) / 2));
+  }
+}
+
 @utility full-bleed {
   width: 100vw;
   margin-inline-start: calc(50% - 50vw);
