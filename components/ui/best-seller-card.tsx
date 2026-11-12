@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "./button";
-import type { ProductPreview } from "@/data/types";
 import Link from "next/link";
+import type { ProductPreview } from "@/data/types";
 
 type Props = {
   product: ProductPreview;
@@ -41,6 +41,7 @@ export default function BestsellerCard({ product, variant = "lg" }: Props) {
         aria-label={product.name}
         href={`/products/${product.slug}`}
         className="focus-ring block w-full"
+        draggable={false}
       >
         <div className="tablet:rounded-card aspect-3/4 w-full overflow-hidden rounded-2xl">
           <Image

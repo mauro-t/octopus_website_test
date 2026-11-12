@@ -102,6 +102,7 @@ export default function Carousel({ labelledBy, slides }: Props) {
             className="desktop:not-last:pr-24 not-last:pr-16"
             onFocus={(e) => {
               e.stopPropagation();
+              if (!e.target.matches(":focus-visible")) return;
               x.jump(Math.max(-maxDrag, -slideWidth.current * index));
             }}
           >
