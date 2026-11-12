@@ -1,6 +1,21 @@
 import { defineConfig } from "vite-plus";
+import { playwright } from "vite-plus/test/browser-playwright";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  test: {
+    include: ["tests/components/**/*.test.tsx"],
+    setupFiles: ["./tests/components/setup.ts"],
+    browser: {
+      enabled: true,
+      headless: true,
+      provider: playwright(),
+      instances: [{ browser: "chromium" }],
+      viewport: { width: 800, height: 600 },
+    },
+  },
   staged: {
     "*": "vp check --fix",
   },
