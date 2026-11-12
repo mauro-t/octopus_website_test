@@ -37,6 +37,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 Header: sono tutte categorie e un pulsante where to buy. Potrebbero derivare direttamente dalle cateogorie del CMS, ma preferisco tenerle separate perché rappresentano due cose diverse
 Gestire line-height con --line-height nelle variabili di tailwind
-Sezione accessori al limite tra tablet e mobile non regge
 Si possono uniformare i due banner in homepage nella struttura dei dati
 Creare dei componenti per la tipografia ricorrente
+Trade offs: il modello dati di un CMS è più complesso di quello progettato ora. Alcuni componenti non sono sufficientemente dinamici, a seconda delle aspettative es. Nelle griglie di categoria mostriamo 3 prodotti. Per aggiungere un prodotto alla categoria dobbiamo capire come farlo visualizzare e servirebbero più layout o una regola per cui un quarto prodotto viene visualizzato in un determinato modo.

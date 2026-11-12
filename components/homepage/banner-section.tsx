@@ -14,7 +14,7 @@ export default function BannerSection({ section }: Props) {
           {section.title}
         </h2>
         {section.subtitle && (
-          <p className="text-secondary text-md tablet:text-lg desktop:text-xl mt-16 leading-1">
+          <p className="text-secondary text-md tablet:text-lg desktop:text-xl mt-16">
             {section.subtitle}
           </p>
         )}

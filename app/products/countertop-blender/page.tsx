@@ -46,7 +46,7 @@ export default function Product() {
             <section className="space-y-16">
               <SpecsAccordions specs={product.specs} />
               <div className="rounded-card bg-primary desktop:px-[20px] flex w-full justify-between p-16">
-                <strong>Downloads</strong>
+                <strong className="leading-1.1">Downloads</strong>
                 <a
                   href={product.manualUrl}
                   target="_blank"

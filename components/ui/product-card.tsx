@@ -69,7 +69,7 @@ const CardHeading = ({
         {title}
       </h3>
       {subtitle && (
-        <p className={twMerge("text-secondary desktop:text-lg mt-16 leading-1", classes.subtitle)}>
+        <p className={twMerge("text-secondary desktop:text-lg mt-16", classes.subtitle)}>
           {subtitle}
         </p>
       )}

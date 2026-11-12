@@ -16,7 +16,7 @@ export default function BestsellerCard({ product, variant = "lg" }: Props) {
         <h3 className="tablet:text-2xl desktop:text-3xl leading-1.1 mt-16 text-xl font-bold">
           {product.name}
         </h3>
-        <p className="tablet:text-lg desktop:text-xl text-secondary tablet:mt-16 mt-8 leading-1">
+        <p className="tablet:text-lg desktop:text-xl text-secondary tablet:mt-16 mt-8">
           {product.shortDescription}
         </p>
         <Button as="link" href={`/products/${product.slug}`} className="tablet:mt-32 mt-24">
@@ -56,7 +56,7 @@ export default function BestsellerCard({ product, variant = "lg" }: Props) {
             draggable={false}
           />
         </div>
-        <h3 className="tablet:text-lg mt-32 font-bold">{product.name}</h3>
+        <h3 className="tablet:text-lg leading-1.1 mt-32 font-bold">{product.name}</h3>
         <p className="text-secondary mt-8">{product.shortDescription}</p>
       </Link>
     </article>

@@ -34,7 +34,7 @@ export default function FeaturesGrid({ features }: Props) {
               feature.colSpan == "2" && "desktop:pt-60",
             )}
           >
-            <h2 className="tablet:text-2xl desktop:text-lg text-lg font-bold text-balance">
+            <h2 className="tablet:text-2xl desktop:text-lg leading-1.1 text-lg font-bold text-balance">
               {feature.title}
             </h2>
             <p className="tablet:text-lg desktop:text-base mt-8 text-balance">

@@ -14,7 +14,7 @@ export default function BestSellersSection({ products }: Props) {
     <article className="tablet:pt-80 pt-40">
       <h2
         id={headingId}
-        className="tablet:mb-40 desktop:text-3xl tablet:text-2xl mb-32 text-xl font-bold"
+        className="tablet:mb-40 desktop:text-3xl tablet:text-2xl leading-1.1 mb-32 text-xl font-bold"
       >
         Best sellers
       </h2>
