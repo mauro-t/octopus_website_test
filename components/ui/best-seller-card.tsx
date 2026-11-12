@@ -1,13 +1,15 @@
 import Image from "next/image";
-import type { ProductPreview } from "@/data/types";
 import Button from "./button";
+import type { ProductPreview } from "@/data/types";
+import Link from "next/link";
 
 type Props = {
   product: ProductPreview;
+  variant?: "sm" | "lg";
 };
 
-export default function BestsellerCard({ product }: Props) {
-  return (
+export default function BestsellerCard({ product, variant = "lg" }: Props) {
+  return variant == "lg" ? (
     <article className="desktop:w-[1048px] tablet:w-[688px] bg-primary rounded-card tablet:grid-cols-2 grid min-h-full w-xs grid-cols-1 items-center gap-32 overflow-hidden">
       <div className="desktop:pl-80 tablet:pl-60 not-tablet:pr-24 not-tablet:pt-32 not-tablet:text-center pl-24">
         <p className="text-md text-accent">{product.category.label}</p>
@@ -32,6 +34,26 @@ export default function BestsellerCard({ product }: Props) {
         sizes="(min-width: 810px) 33vw, 100vw"
         draggable={false}
       />
+    </article>
+  ) : (
+    <article className="tablet:w-[265px] group w-[180px]">
+      <Link href={`/products/${product.slug}`} className="block w-full">
+        <div className="tablet:rounded-card aspect-3/4 w-full overflow-hidden rounded-2xl">
+          <Image
+            loading="lazy"
+            decoding="async"
+            width={product.image.width}
+            height={product.image.height}
+            className="h-full w-full object-cover transition-transform duration-350 group-hover:scale-110"
+            src={product.image.src}
+            alt={product.image.alt}
+            sizes="(min-width: 810px) 33vw, 100vw"
+            draggable={false}
+          />
+        </div>
+        <h3 className="tablet:text-lg mt-32 font-bold">{product.name}</h3>
+        <p className="text-secondary mt-8">{product.shortDescription}</p>
+      </Link>
     </article>
   );
 }
