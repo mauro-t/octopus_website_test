@@ -1,6 +1,7 @@
 import Image from "next/image";
 import clsx from "clsx";
 import type { FeaturesGridSection } from "@/data/types";
+import Reveal from "../animations/reveal";
 
 type Props = FeaturesGridSection;
 
@@ -8,7 +9,7 @@ export default function FeaturesGrid({ features }: Props) {
   return (
     <div className="desktop:grid-cols-2 tablet:my-80 my-40 grid gap-16">
       {features.map((feature, index) => (
-        <article
+        <Reveal
           key={index}
           className={clsx(
             feature.colSpan == "2"
@@ -41,7 +42,7 @@ export default function FeaturesGrid({ features }: Props) {
               {feature.description}
             </p>
           </div>
-        </article>
+        </Reveal>
       ))}
     </div>
   );

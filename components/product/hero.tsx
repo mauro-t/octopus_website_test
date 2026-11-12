@@ -3,6 +3,7 @@ import Image from "next/image";
 import ColourSelector from "./colour-selector";
 import type { Product } from "@/data/types";
 import Button from "../ui/button";
+import Reveal from "../animations/reveal";
 
 type Props = {
   product: Product;
@@ -11,20 +12,22 @@ type Props = {
 export default function Hero({ product }: Props) {
   return (
     <>
-      <Image
-        loading="eager"
-        decoding="async"
-        preload
-        width={product.image.width}
-        height={product.image.height}
-        className="tablet:h-svh bg-primary h-[75vh] min-h-[590px] w-full object-contain"
-        src={product.image.src}
-        alt={product.image.alt}
-        sizes="(min-width: 810px) 33vw, 100vw"
-        draggable={false}
-      />
+      <Reveal className="tablet:h-svh bg-primary h-[75vh] min-h-[590px] w-full">
+        <Image
+          loading="eager"
+          decoding="async"
+          preload
+          width={product.image.width}
+          height={product.image.height}
+          className="h-full w-full object-contain"
+          src={product.image.src}
+          alt={product.image.alt}
+          sizes="(min-width: 810px) 33vw, 100vw"
+          draggable={false}
+        />
+      </Reveal>
       <div className="tablet:sticky tablet:top-1/2 tablet:-translate-y-1/2 not-tablet:px-page-gutter not-tablet:mt-40 pr-24">
-        <div className="max-w-[400px]">
+        <Reveal className="max-w-[400px]">
           <h1 className="leading-1.1 tablet:text-4xl desktop:text-5xl text-3xl font-bold">
             {product.name}
           </h1>
@@ -41,7 +44,7 @@ export default function Hero({ product }: Props) {
               Where to buy
             </Button>
           </div>
-        </div>
+        </Reveal>
       </div>
     </>
   );

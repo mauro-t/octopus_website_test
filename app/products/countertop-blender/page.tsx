@@ -4,6 +4,7 @@ import ProductHero from "@/components/product/hero";
 import FeaturesGrid from "@/components/product/features-grid";
 import SpecsAccordions from "@/components/product/specs-accordions";
 import BestSellersSection from "@/components/product/best-sellers-section";
+import Reveal from "@/components/animations/reveal";
 import type { Metadata } from "next";
 
 const { product, sections, bestSellers } = productPage;
@@ -25,18 +26,19 @@ export default function Product() {
                 switch (section.type) {
                   case "image":
                     return (
-                      <Image
-                        key={section.id}
-                        loading="lazy"
-                        decoding="async"
-                        width={section.image.width}
-                        height={section.image.height}
-                        className="rounded-card tablet:my-80 my-40 aspect-2/3 object-cover"
-                        src={section.image.src}
-                        alt={section.image.alt}
-                        sizes="(min-width: 810px) 50vw, 100vw"
-                        draggable={false}
-                      />
+                      <Reveal key={section.id}>
+                        <Image
+                          loading="lazy"
+                          decoding="async"
+                          width={section.image.width}
+                          height={section.image.height}
+                          className="rounded-card tablet:my-80 my-40 aspect-2/3 object-cover"
+                          src={section.image.src}
+                          alt={section.image.alt}
+                          sizes="(min-width: 810px) 50vw, 100vw"
+                          draggable={false}
+                        />
+                      </Reveal>
                     );
                   case "features":
                     return <FeaturesGrid key={section.id} features={section.features} />;
@@ -45,7 +47,7 @@ export default function Product() {
             </section>
             <section className="space-y-16">
               <SpecsAccordions specs={product.specs} />
-              <div className="rounded-card bg-primary desktop:px-[20px] flex w-full justify-between p-16">
+              <Reveal className="rounded-card bg-primary desktop:px-[20px] flex w-full justify-between p-16">
                 <strong className="leading-1.1">Downloads</strong>
                 <a
                   href={product.manualUrl}
@@ -55,7 +57,7 @@ export default function Product() {
                 >
                   User manual
                 </a>
-              </div>
+              </Reveal>
             </section>
           </article>
         </div>

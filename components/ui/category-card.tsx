@@ -10,13 +10,13 @@ type Props = {
 export default function CategoryCard({ image, name }: Props) {
   return (
     <Link href="#" className="inline-grid grid-rows-[minmax(0,1fr)_auto] gap-16">
-      <div className="rounded-card aspect-square overflow-hidden">
+      <div className="rounded-card group aspect-square overflow-hidden">
         <Image
           loading="lazy"
           decoding="async"
           width={image.width}
           height={image.height}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover transition-transform duration-350 group-hover:scale-110"
           src={image.src}
           alt={image.alt}
           sizes="(min-width: 1200px) 25vw, (min-width: 810px) 50vw, 100vw"
