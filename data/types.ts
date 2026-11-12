@@ -124,6 +124,6 @@ export type ProductPage = {
   sections: ({ id: string } & (
     | (FeaturesGridSection & { type: "features" })
     | { type: "image"; image: MediaWithAlt }
-    | (BestSellersSection & { type: "best-sellers" })
   ))[];
+  bestSellers: BestSellersSection;
 };

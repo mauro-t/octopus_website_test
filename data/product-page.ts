@@ -58,10 +58,8 @@ export const productPage = {
         "e6dfd5",
       ),
     },
-    {
-      id: "product-best-sellers",
-      type: "best-sellers",
-      products: bestSellers,
-    },
   ],
+  bestSellers: {
+    products: bestSellers,
+  },
 } satisfies ProductPage;
