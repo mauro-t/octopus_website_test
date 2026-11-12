@@ -4,8 +4,14 @@ import ProductHero from "@/components/product/hero";
 import FeaturesGrid from "@/components/product/features-grid";
 import SpecsAccordions from "@/components/product/specs-accordions";
 import BestSellersSection from "@/components/product/best-sellers-section";
+import type { Metadata } from "next";
 
 const { product, sections, bestSellers } = productPage;
+
+export const metadata: Metadata = {
+  title: `Octopus | ${product.name}`,
+  description: product.shortDescription,
+};
 
 export default function Product() {
   return (

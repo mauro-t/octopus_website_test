@@ -5,6 +5,12 @@ import BannerSection from "@/components/homepage/banner-section";
 import BestSellersSection from "@/components/homepage/best-sellers-section";
 import ExploreAllSection from "@/components/homepage/explore-all-section";
 import StoreLocatorSection from "@/components/homepage/store-locator-section";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Octopus | Homepage",
+  description: "Find your Octopus product",
+};
 
 export default function Home() {
   return homepageSections.map((section) => {
