@@ -8,6 +8,7 @@ export default defineConfig({
   test: {
     include: ["tests/components/**/*.test.tsx"],
     setupFiles: ["./tests/components/setup.ts"],
+    forbidOnly: !!process.env.CI,
     browser: {
       enabled: true,
       headless: true,
