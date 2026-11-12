@@ -5,10 +5,11 @@ import { animate, motion, useMotionValue, useMotionValueEvent } from "motion/rea
 import Button from "./button";
 
 type Props = {
+  labelledBy: string;
   slides: React.ReactNode[];
 };
 
-export default function Carousel({ slides }: Props) {
+export default function Carousel({ labelledBy, slides }: Props) {
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
@@ -63,11 +64,17 @@ export default function Carousel({ slides }: Props) {
   }, [getSlidesMap]);
 
   return (
-    <div ref={viewportRef} className="full-bleed overflow-hidden">
+    <div
+      ref={viewportRef}
+      role="group"
+      aria-roledescription="carousel"
+      aria-labelledby={labelledBy}
+      className="full-bleed overflow-x-clip"
+    >
       <motion.div
         ref={trackRef}
         className="px-page-gutter grid min-w-fit touch-pan-y auto-cols-auto grid-flow-col"
-        drag="x"
+        drag={maxDrag > 0 ? "x" : undefined}
         style={{ x }}
         dragConstraints={{ left: -maxDrag, right: 0 }}
         dragElastic={0.1}
@@ -82,6 +89,9 @@ export default function Carousel({ slides }: Props) {
         {slides.map((slide, index) => (
           <div
             key={index}
+            role="group"
+            aria-roledescription="slide"
+            aria-label={`${index + 1} of ${slides.length}`}
             ref={(node) => {
               const map = getSlidesMap();
               map.set(index, node);
@@ -90,31 +100,39 @@ export default function Carousel({ slides }: Props) {
               };
             }}
             className="desktop:not-last:pr-24 not-last:pr-16"
+            onFocus={(e) => {
+              e.stopPropagation();
+              x.jump(Math.max(-maxDrag, -slideWidth.current * index));
+            }}
           >
             {slide}
           </div>
         ))}
       </motion.div>
-      <div className="app-container mt-40 flex items-center justify-end gap-8">
-        <Button
-          icon
-          variant="secondary"
-          className="size-40"
-          disabled={disabled == "prev"}
-          onClick={() => animate(x, Math.min(0, x.get() + slideWidth.current))}
-        >
-          <div className="size-[10px] translate-x-[2px] -rotate-45 skew-4 border-t-2 border-l-2 border-current"></div>
-        </Button>
-        <Button
-          icon
-          variant="secondary"
-          disabled={disabled == "next"}
-          className="size-40"
-          onClick={() => animate(x, Math.max(-maxDrag, x.get() - slideWidth.current))}
-        >
-          <div className="size-[10px] translate-x-[-2px] -rotate-45 skew-4 border-r-2 border-b-2 border-current"></div>
-        </Button>
-      </div>
+      {maxDrag > 0 && (
+        <div className="app-container mt-40 flex items-center justify-end gap-8">
+          <Button
+            icon
+            aria-label="Previous slide"
+            variant="secondary"
+            className="size-40"
+            disabled={disabled == "prev" || maxDrag <= 0}
+            onClick={() => animate(x, Math.min(0, x.get() + slideWidth.current))}
+          >
+            <div className="size-[10px] translate-x-[2px] -rotate-45 skew-4 border-t-2 border-l-2 border-current"></div>
+          </Button>
+          <Button
+            icon
+            aria-label="Next slide"
+            variant="secondary"
+            disabled={disabled == "next" || maxDrag <= 0}
+            className="size-40"
+            onClick={() => animate(x, Math.max(-maxDrag, x.get() - slideWidth.current))}
+          >
+            <div className="size-[10px] translate-x-[-2px] -rotate-45 skew-4 border-r-2 border-b-2 border-current"></div>
+          </Button>
+        </div>
+      )}
     </div>
   );
 }
