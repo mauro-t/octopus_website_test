@@ -111,6 +111,14 @@ export const productCatalog = {
         title: "Technical specifications",
         items: ["Power: 1000 W", "Voltage: 220–240 V", "Frequency: 50/60 Hz"],
       },
+      {
+        title: "Dimensions & weight",
+        items: ["Dimensions: ", "Weight: ", "Cable length: "],
+      },
+      {
+        title: "Product information",
+        items: ["Model: "],
+      },
     ],
   },
   powerBank: {
