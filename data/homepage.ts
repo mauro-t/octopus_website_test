@@ -17,13 +17,16 @@ export const homepageSections = [
       label: "Learn more",
       href: productHref,
     },
-    image: responsivePlaceholderImage(
-      "Close-up of the Octopus Ionic Hair Dryer",
-      [1920, 1080],
-      [1200, 675],
-      [768, 1024],
-      "d7d7d7",
-    ),
+    video: {
+      alt: "Close-up of the Octopus Ionic Hair Dryer",
+      src: "https://placeholdervideo.dev/768x1024",
+      width: 768,
+      height: 1024,
+      sources: {
+        desktop: "https://placeholdervideo.dev/1920x1080",
+        tablet: "https://placeholdervideo.dev/1200x675",
+      },
+    },
   },
   {
     id: "home-best-sellers",

@@ -1,5 +1,5 @@
 import Heading from "../ui/heading";
-import Picture from "../ui/picture";
+import ResponsiveVideo from "../ui/responsive-video";
 import type { HomepageHeroSection } from "@/data/types";
 
 type Props = {
@@ -9,15 +9,7 @@ type Props = {
 export default function HeroSection({ section }: Props) {
   return (
     <article className="full-bleed relative flex min-h-svh justify-center">
-      <Picture
-        image={section.image}
-        elementProps={{
-          className: "absolute inset-0 w-full h-full object-cover",
-          loading: "eager",
-          fetchPriority: "high",
-        }}
-        sizes="100vw"
-      />
+      <ResponsiveVideo {...section.video} className="absolute inset-0 h-full w-full object-cover" />
       <div className="tablet:py-[180px] relative z-10 py-[100px]">
         <Heading
           title={section.title}

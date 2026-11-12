@@ -21,6 +21,14 @@ export type MediaWithAlt = MediaSource & {
   };
 };
 
+export type VideoWithAlt = MediaSource & {
+  alt: string;
+  sources?: {
+    tablet: string;
+    desktop: string;
+  };
+};
+
 export type ProductColour = {
   label: string;
   hex: string;
@@ -50,7 +58,7 @@ export type HomepageHeroSection = {
   title: string;
   subtitle?: string;
   cta?: Cta;
-  image: MediaWithAlt;
+  video: VideoWithAlt;
 };
 
 export type BestSellersSection = {
