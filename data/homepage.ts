@@ -6,8 +6,8 @@ export const homepageSections = [
   {
     id: "home-hero",
     type: "hero",
-    title: "Octopus Hair Dryer",
-    subtitle: "Salon-quality hair. At home, in minutes.",
+    title: "Octopus Ionic Hair Dryer",
+    subtitle: "A powerful ionic hair dryer with a 110,000 RPM motor for fast drying and less frizz",
     cta: {
       label: "Learn more",
       href: productHref,

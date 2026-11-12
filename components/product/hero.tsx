@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Image from "next/image";
 import ColourSelector from "./colour-selector";
 import type { Product } from "@/data/types";
+import Button from "../ui/button";
 
 type Props = {
   product: Product;
@@ -16,13 +17,13 @@ export default function Hero({ product }: Props) {
         preload
         width={product.image.width}
         height={product.image.height}
-        className="h-svh object-cover"
+        className="tablet:h-svh h-[75vh] min-h-[590px] object-cover"
         src={product.image.src}
         alt={product.image.alt}
         sizes="(min-width: 810px) 33vw, 100vw"
         draggable={false}
       />
-      <div className="tablet:sticky tablet:top-1/2 tablet:-translate-y-1/2 not-tablet:px-page-gutter not-tablet:mt-40">
+      <div className="tablet:sticky tablet:top-1/2 tablet:-translate-y-1/2 not-tablet:px-page-gutter not-tablet:mt-40 pr-24">
         <div className="max-w-[400px]">
           <h1 className="leading-1.1 tablet:text-4xl desktop:text-5xl text-3xl font-bold">
             {product.name}
@@ -35,6 +36,11 @@ export default function Hero({ product }: Props) {
               </Suspense>
             </div>
           )}
+          <div className="mt-32">
+            <Button as="link" className="w-full" href="#">
+              Where to buy
+            </Button>
+          </div>
         </div>
       </div>
     </>

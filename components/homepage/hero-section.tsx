@@ -1,6 +1,6 @@
 import Heading from "../ui/heading";
-import type { HomepageHeroSection } from "@/data/types";
 import Picture from "../ui/picture";
+import type { HomepageHeroSection } from "@/data/types";
 
 type Props = {
   section: HomepageHeroSection;
@@ -8,7 +8,7 @@ type Props = {
 
 export default function HeroSection({ section }: Props) {
   return (
-    <article className="full-bleed relative flex h-svh items-center justify-center">
+    <article className="full-bleed relative flex min-h-svh justify-center">
       <Picture
         image={section.image}
         elementProps={{
@@ -18,7 +18,7 @@ export default function HeroSection({ section }: Props) {
         }}
         sizes="100vw"
       />
-      <div className="relative z-10">
+      <div className="tablet:py-[180px] relative z-10 py-[100px]">
         <Heading
           title={section.title}
           subtitle={section.subtitle}
