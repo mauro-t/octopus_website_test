@@ -17,7 +17,7 @@ export default function Hero({ product }: Props) {
         preload
         width={product.image.width}
         height={product.image.height}
-        className="tablet:h-svh h-[75vh] min-h-[590px] object-cover"
+        className="tablet:h-svh bg-primary h-[75vh] min-h-[590px] w-full object-contain"
         src={product.image.src}
         alt={product.image.alt}
         sizes="(min-width: 810px) 33vw, 100vw"

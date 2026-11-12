@@ -1,4 +1,9 @@
-import { placeholderImage, responsivePlaceholderImage } from "./images";
+import {
+  categoryImages,
+  hairDryerBannerImage,
+  responsivePlaceholderImage,
+  storeLocatorImage,
+} from "./images";
 import { bestSellers, categories, productCatalog, productHref } from "./products";
 import type { HomepageSection } from "./types";
 
@@ -50,13 +55,7 @@ export const homepageSections = [
     title: "Octopus Ionic Hair Dryer",
     subtitle: "Less time drying. More time for you.",
     cta: { label: "Discover", href: productHref },
-    image: responsivePlaceholderImage(
-      "Woman styling her hair with the Octopus Ionic Hair Dryer",
-      [1920, 800],
-      [1200, 500],
-      [768, 1024],
-      "dbc0a7",
-    ),
+    image: hairDryerBannerImage,
   },
   {
     id: "home-security",
@@ -75,7 +74,7 @@ export const homepageSections = [
         "c6b5a8",
       ),
     },
-    items: [productCatalog.indoorCamera, productCatalog.videoDoorbell],
+    items: [productCatalog.outdoorCamera, productCatalog.videoDoorbell],
   },
   {
     id: "home-accessories",
@@ -84,30 +83,26 @@ export const homepageSections = [
     title: "Accessories",
     subtitle: "The little things that keep everything connected.",
     cta: { label: "Explore accessories", href: "#" },
-    items: [
-      productCatalog.powerBank,
-      productCatalog.chargingPowerBank,
-      productCatalog.hairDryerWallMount,
-    ],
+    items: [productCatalog.powerBank, productCatalog.powerBoard, productCatalog.chargingStation],
   },
   {
     id: "home-explore-categories",
     type: "explore-all",
     items: [
       {
-        image: placeholderImage("Kitchen appliances", 400, 400),
+        image: categoryImages.kitchen,
         category: categories.kitchen,
       },
       {
-        image: placeholderImage("Home security cameras", 400, 400),
+        image: categoryImages.homeSecurity,
         category: categories["home-security"],
       },
       {
-        image: placeholderImage("Hair care appliances", 400, 400),
+        image: categoryImages.hairCare,
         category: categories["hair-care"],
       },
       {
-        image: placeholderImage("Accessories", 400, 400),
+        image: categoryImages.accessories,
         category: categories.accessories,
       },
     ],
@@ -115,13 +110,7 @@ export const homepageSections = [
   {
     id: "home-store-locator",
     type: "store-locator",
-    image: responsivePlaceholderImage(
-      "Octopus kitchen appliances on a red background",
-      [1920, 800],
-      [1200, 500],
-      [768, 1024],
-      "df0716",
-    ),
+    image: storeLocatorImage,
     cta: { label: "Find your nearest store", href: "#" },
   },
 ] satisfies HomepageSection[];

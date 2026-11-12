@@ -34,3 +34,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+Header: sono tutte categorie e un pulsante where to buy. Potrebbero derivare direttamente dalle cateogorie del CMS, ma preferisco tenerle separate perché rappresentano due cose diverse
+Gestire line-height con --line-height nelle variabili di tailwind
+Sezione accessori al limite tra tablet e mobile non regge
+Si possono uniformare i due banner in homepage nella struttura dei dati
+Creare dei componenti per la tipografia ricorrente
