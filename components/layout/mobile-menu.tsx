@@ -11,6 +11,8 @@ export default function MobileMenu() {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
+  const triggerRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     const mql = window.matchMedia("(width > 809px)");
 
@@ -23,7 +25,10 @@ export default function MobileMenu() {
 
     function handleKeyDown(e: KeyboardEvent) {
       if (ref.current?.dataset.open !== undefined) {
-        if (e.key == "Escape") setOpen(false);
+        if (e.key == "Escape") {
+          setOpen(false);
+          triggerRef.current?.focus();
+        }
       }
     }
 
@@ -57,7 +62,13 @@ export default function MobileMenu() {
         </Link>
         <Collapsible.Trigger
           render={
-            <Button icon variant="ghost" className="size-40" aria-label="Mobile menu trigger">
+            <Button
+              ref={triggerRef}
+              icon
+              variant="ghost"
+              className="size-40"
+              aria-label="Mobile menu trigger"
+            >
               <div className="relative h-8 w-24">
                 <span className="absolute top-0 left-0 block h-[2px] w-full rounded-full bg-black transition-all group-data-open/collapsible:top-1/2 group-data-open/collapsible:-translate-y-1/2 group-data-open/collapsible:rotate-45"></span>
                 <span className="absolute top-full left-0 block h-[2px] w-full -translate-y-full rounded-full bg-black transition-all group-data-open/collapsible:top-1/2 group-data-open/collapsible:-translate-y-1/2 group-data-open/collapsible:-rotate-45"></span>
