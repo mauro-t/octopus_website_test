@@ -99,7 +99,7 @@ const LgVariant = (props: Props) => {
         image={props.image}
         sizes="100vw"
         elementProps={{
-          className: "absolute inset-0 w-full h-full object-contain",
+          className: "absolute inset-0 w-full h-full object-cover",
         }}
       />
       <div
