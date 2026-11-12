@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Collapsible } from "@base-ui/react/collapsible";
 import { navItems } from "@/data/nav-items";
@@ -5,10 +8,51 @@ import Button from "../ui/button";
 import Logo from "../logo/logo";
 
 export default function MobileMenu() {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const mql = window.matchMedia("(width > 809px)");
+
+    function handleClick(e: PointerEvent) {
+      if (!ref.current || !(e.target instanceof Node)) return;
+      if (!ref.current.contains(e.target)) {
+        setOpen(false);
+      }
+    }
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (ref.current?.dataset.open !== undefined) {
+        if (e.key == "Escape") setOpen(false);
+      }
+    }
+
+    function handleMqlChange(e: MediaQueryListEvent) {
+      if (e.matches && ref.current?.dataset.open !== undefined) {
+        setOpen(false);
+      }
+    }
+
+    mql.addEventListener("change", handleMqlChange);
+    document.addEventListener("click", handleClick);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      mql.removeEventListener("change", handleMqlChange);
+      document.removeEventListener("click", handleClick);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
-    <Collapsible.Root className="tablet:hidden group/collapsible">
+    <Collapsible.Root
+      ref={ref}
+      open={open}
+      onOpenChange={setOpen}
+      className="tablet:hidden group/collapsible"
+    >
       <div className="flex items-center justify-between">
-        <Link aria-label="Octopus logo" href="/" className="text-accent focus-ring">
+        <Link aria-label="Octopus - Homepage" href="/" className="text-accent focus-ring">
           <Logo className="w-32" />
         </Link>
         <Collapsible.Trigger
@@ -27,12 +71,21 @@ export default function MobileMenu() {
           {navItems.map((item) => (
             <li key={item.id}>
               {item.type == "link" && (
-                <Link href={item.href} className="focus-ring block py-8 leading-1">
+                <Link
+                  href={item.href}
+                  className="focus-ring block py-8 leading-1"
+                  onClick={() => setOpen(false)}
+                >
                   {item.label}
                 </Link>
               )}
               {item.type == "cta" && (
-                <Button href={item.href} as="link" className="w-full">
+                <Button
+                  href={item.href}
+                  as="link"
+                  className="w-full"
+                  onClick={() => setOpen(false)}
+                >
                   {item.label}
                 </Button>
               )}

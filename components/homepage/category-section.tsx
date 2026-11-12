@@ -1,6 +1,6 @@
-import type { CategoryGridSection } from "@/data/types";
 import Heading from "../ui/heading";
 import ProductCard from "../ui/product-card";
+import type { CategoryGridSection } from "@/data/types";
 
 type Props = {
   section: CategoryGridSection;

@@ -6,7 +6,7 @@ import LogoAndType from "../logo/logo-and-type";
 export default function DesktopMenu() {
   return (
     <div className="tablet:flex hidden items-center justify-between">
-      <Link href="/" className="text-accent focus-ring">
+      <Link aria-label="Octopus - Homepage" href="/" className="text-accent focus-ring">
         <LogoAndType className="w-[108px]" />
       </Link>
       <ul className="flex items-center gap-8">
