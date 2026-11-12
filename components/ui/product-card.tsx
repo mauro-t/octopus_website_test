@@ -99,7 +99,7 @@ const LgVariant = (props: Props) => {
         image={props.image}
         sizes="100vw"
         elementProps={{
-          className: "absolute inset-0 w-full h-full object-cover",
+          className: "absolute inset-0 w-full h-full object-contain",
         }}
       />
       <div
@@ -151,7 +151,7 @@ const MdVariant = (props: Props) => {
         height={props.image.height}
         className={twMerge(
           clsx(
-            "min-h-0 w-full object-cover",
+            "min-h-0 w-full object-contain",
             classes.image,
             props.fillHeight && "desktop:h-full desktop:min-h-0 desktop:w-full",
           ),
@@ -193,7 +193,7 @@ const SmVariant = (props: Props) => {
         height={props.image.height}
         className={twMerge(
           clsx(
-            "min-h-0 w-full object-cover",
+            "min-h-0 w-full object-contain",
             classes.image,
             props.fillHeight && "desktop:h-full desktop:min-h-0 desktop:w-full",
           ),
