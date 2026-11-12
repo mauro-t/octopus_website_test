@@ -8,12 +8,12 @@ export default function MobileMenu() {
   return (
     <Collapsible.Root className="tablet:hidden group/collapsible">
       <div className="flex items-center justify-between">
-        <Link href="/" className="text-accent focus-ring">
+        <Link aria-label="Octopus logo" href="/" className="text-accent focus-ring">
           <Logo className="w-32" />
         </Link>
         <Collapsible.Trigger
           render={
-            <Button icon variant="ghost" className="size-40">
+            <Button icon variant="ghost" className="size-40" aria-label="Mobile menu trigger">
               <div className="relative h-8 w-24">
                 <span className="absolute top-0 left-0 block h-[2px] w-full rounded-full bg-black transition-all group-data-open/collapsible:top-1/2 group-data-open/collapsible:-translate-y-1/2 group-data-open/collapsible:rotate-45"></span>
                 <span className="absolute top-full left-0 block h-[2px] w-full -translate-y-full rounded-full bg-black transition-all group-data-open/collapsible:top-1/2 group-data-open/collapsible:-translate-y-1/2 group-data-open/collapsible:-rotate-45"></span>

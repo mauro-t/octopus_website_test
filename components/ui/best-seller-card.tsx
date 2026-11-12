@@ -37,7 +37,11 @@ export default function BestsellerCard({ product, variant = "lg" }: Props) {
     </article>
   ) : (
     <article className="tablet:w-[265px] group w-[180px]">
-      <Link href={`/products/${product.slug}`} className="focus-ring block w-full">
+      <Link
+        aria-label={product.name}
+        href={`/products/${product.slug}`}
+        className="focus-ring block w-full"
+      >
         <div className="tablet:rounded-card aspect-3/4 w-full overflow-hidden rounded-2xl">
           <Image
             loading="lazy"

@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="app-container desktop:pt-60 pt-48 pb-24 leading-1">
       <div className="tablet:flex-row flex flex-col justify-between gap-48">
-        <Link href="/" className="focus-ring">
+        <Link aria-label="Octopus logo" href="/" className="focus-ring">
           <LogoAndTypeSm className="w-[100px]" />
         </Link>
         <article className="tablet:flex-row flex flex-col gap-60">

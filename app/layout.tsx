@@ -1,9 +1,9 @@
 import localFont from "next/font/local";
 import clsx from "clsx";
 import "./globals.css";
-import type { Metadata } from "next";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import type { Metadata } from "next";
 
 const Satoshi = localFont({
   src: "../assets/font/Satoshi-Variable.woff2",
