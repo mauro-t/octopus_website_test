@@ -28,7 +28,7 @@ export default function Hero({ product }: Props) {
           <h1 className="leading-1.1 tablet:text-4xl desktop:text-5xl text-3xl font-bold">
             {product.name}
           </h1>
-          <p className="desktop:mt-32 mt-24">{product.description}</p>
+          <p className="desktop:mt-32 text-secondary mt-24">{product.description}</p>
           {product.colours && (
             <div className="mt-24">
               <Suspense>

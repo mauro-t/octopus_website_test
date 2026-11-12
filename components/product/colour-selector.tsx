@@ -39,7 +39,7 @@ export default function ColourSelector({ colours }: Props) {
           />
         }
       >
-        <div className="flex gap-8">
+        <div className="text-secondary flex gap-8">
           <Fieldset.Legend>Colour</Fieldset.Legend> <span>-</span>{" "}
           <output>{selectedColour?.label}</output>
         </div>
