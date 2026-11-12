@@ -41,7 +41,12 @@ export default function Product() {
               <SpecsAccordions specs={product.specs} />
               <div className="rounded-card bg-primary desktop:px-[20px] flex w-full justify-between p-16">
                 <strong>Downloads</strong>
-                <a href={product.manualUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={product.manualUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus-ring"
+                >
                   User manual
                 </a>
               </div>

@@ -13,7 +13,7 @@ export default function SpecsAccordions({ specs }: Props) {
       {specs.map((spec, index) => (
         <Accordion.Item key={index}>
           <Accordion.Header className="">
-            <Accordion.Trigger className="desktop:py-[20px] group bg-primary flex w-full items-center justify-between px-[20px] py-16 font-bold">
+            <Accordion.Trigger className="desktop:py-[20px] focus-ring group bg-primary flex w-full items-center justify-between px-[20px] py-16 font-bold ring-inset">
               {spec.title}
               <div className="size-[10px] translate-x-[-2px] -rotate-45 skew-4 border-r-2 border-b-2 border-current transition-transform duration-350 group-data-panel-open:rotate-45"></div>
             </Accordion.Trigger>
