@@ -81,7 +81,7 @@ export default function CategorySection({ section }: Props) {
       )}
 
       {section.layout == "grid" && (
-        <div className="desktop:gap-24 tablet:grid-cols-3 grid grid-cols-1 gap-16">
+        <div className="desktop:gap-24 tablet:flex-row flex flex-col gap-16">
           {section.items.map((item) => (
             <ProductCard
               key={item.name}
