@@ -4,6 +4,7 @@ import ColourSelector from "./colour-selector";
 import Button from "../../ui/button";
 import Reveal from "../../animations/reveal";
 import type { Product } from "@/data/types";
+import FloatingButton from "./floating-button";
 
 type Props = {
   product: Product;
@@ -45,11 +46,7 @@ export default function Hero({ product }: Props) {
             </Button>
           </div>
         </Reveal>
-        <div className="px-page-gutter tablet:hidden fixed inset-x-0 bottom-0 z-20 bg-white py-[10px]">
-          <Button as="link" className="w-full" href="#">
-            Where to buy
-          </Button>
-        </div>
+        <FloatingButton />
       </div>
     </>
   );
