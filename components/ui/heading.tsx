@@ -31,9 +31,7 @@ export default function Heading(props: Props) {
   const classes = variantClasses[variant];
   return (
     <section className="tablet:max-w-[550px] max-w-[342px] text-center">
-      <TitleTag className={twMerge(clsx(classes.title, "leading-1.1 font-bold text-balance"))}>
-        {title}
-      </TitleTag>
+      <TitleTag className={twMerge(clsx(classes.title, "leading-1.1 font-bold"))}>{title}</TitleTag>
       {subtitle && <p className={twMerge(clsx(classes.subtitle, "text-secondary"))}>{subtitle}</p>}
       {cta && (
         <Button variant={variant} as="link" href={cta.href} className="tablet:mt-32 mt-24">

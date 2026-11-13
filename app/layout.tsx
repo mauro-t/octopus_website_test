@@ -24,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <header className="fixed inset-x-0 top-8 z-50 w-full">
           <Navbar />
         </header>
-        <main className="app-container min-h-svh">{children}</main>
+        <main className="app-container min-h-svh leading-[1.35] font-[470]">{children}</main>
         <footer className="bg-accent text-white">
           <Footer />
         </footer>

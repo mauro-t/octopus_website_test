@@ -9,7 +9,7 @@ type Props = {
 
 export default function BannerSection({ section }: Props) {
   return (
-    <Reveal>
+    <Reveal className="not-tablet:mt-40">
       <Banner image={section.image}>
         <>
           <h2 className="tablet:text-4xl desktop:text-5xl leading-1.1 text-3xl font-bold">
