@@ -39,12 +39,17 @@ export default function Hero({ product }: Props) {
               </Suspense>
             </div>
           )}
-          <div className="mt-32">
+          <div className="not-tablet:hidden mt-32">
             <Button as="link" className="w-full" href="#">
               Where to buy
             </Button>
           </div>
         </Reveal>
+        <div className="px-page-gutter tablet:hidden fixed inset-x-0 bottom-0 z-20 bg-white py-[10px]">
+          <Button as="link" className="w-full" href="#">
+            Where to buy
+          </Button>
+        </div>
       </div>
     </>
   );
