@@ -15,6 +15,7 @@ const Satoshi = localFont({
 export const metadata: Metadata = {
   title: "Octopus",
   description: "Test website",
+  metadataBase: new URL("https://octopuswebsitetest.vercel.app"),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,10 +1,10 @@
 import { homepageSections } from "@/data/homepage";
-import HeroSection from "@/components/homepage/hero-section";
-import CategorySection from "@/components/homepage/category-section";
-import BannerSection from "@/components/homepage/banner-section";
-import BestSellersSection from "@/components/homepage/best-sellers-section";
-import ExploreAllSection from "@/components/homepage/explore-all-section";
-import StoreLocatorSection from "@/components/homepage/store-locator-section";
+import HeroSection from "@/components/pages/homepage/hero-section";
+import CategorySection from "@/components/pages/homepage/category-section";
+import BannerSection from "@/components/pages/homepage/banner-section";
+import BestSellersSection from "@/components/pages/homepage/best-sellers-section";
+import ExploreAllSection from "@/components/pages/homepage/explore-all-section";
+import StoreLocatorSection from "@/components/pages/homepage/store-locator-section";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

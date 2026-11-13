@@ -1,6 +1,6 @@
-import Reveal from "../animations/reveal";
-import Banner from "../ui/banner";
-import Button from "../ui/button";
+import Reveal from "../../animations/reveal";
+import Banner from "../../ui/banner";
+import Button from "../../ui/button";
 import type { BannerSection } from "@/data/types";
 
 type Props = {

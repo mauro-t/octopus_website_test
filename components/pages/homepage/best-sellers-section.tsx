@@ -1,8 +1,8 @@
 import { useId } from "react";
-import Carousel from "../ui/carousel";
-import BestsellerCard from "../ui/best-seller-card";
+import Carousel from "../../ui/carousel";
+import BestsellerCard from "../../ui/best-seller-card";
+import Reveal from "../../animations/reveal";
 import type { BestSellersSection } from "@/data/types";
-import Reveal from "../animations/reveal";
 
 type Props = {
   section: BestSellersSection;

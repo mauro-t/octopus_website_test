@@ -1,7 +1,7 @@
 import Image from "next/image";
 import clsx from "clsx";
 import type { FeaturesGridSection } from "@/data/types";
-import Reveal from "../animations/reveal";
+import Reveal from "../../animations/reveal";
 
 type Props = FeaturesGridSection;
 

@@ -1,5 +1,5 @@
 import { Accordion } from "@base-ui/react/accordion";
-import Reveal from "../animations/reveal";
+import Reveal from "../../animations/reveal";
 
 type Props = {
   specs: {

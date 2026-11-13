@@ -1,6 +1,6 @@
-import Reveal from "../animations/reveal";
-import Heading from "../ui/heading";
-import ProductCard from "../ui/product-card";
+import Reveal from "../../animations/reveal";
+import Heading from "../../ui/heading";
+import ProductCard from "../../ui/product-card";
 import type { CategoryGridSection } from "@/data/types";
 
 type Props = {

@@ -1,8 +1,8 @@
 import { useId } from "react";
-import Carousel from "../ui/carousel";
-import BestSellerCard from "../ui/best-seller-card";
+import Carousel from "../../ui/carousel";
+import BestSellerCard from "../../ui/best-seller-card";
+import Reveal from "../../animations/reveal";
 import type { ProductPreview } from "@/data/types";
-import Reveal from "../animations/reveal";
 
 type Props = {
   products: ProductPreview[];

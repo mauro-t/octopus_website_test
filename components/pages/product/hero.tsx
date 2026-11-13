@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 import Image from "next/image";
 import ColourSelector from "./colour-selector";
+import Button from "../../ui/button";
+import Reveal from "../../animations/reveal";
 import type { Product } from "@/data/types";
-import Button from "../ui/button";
-import Reveal from "../animations/reveal";
 
 type Props = {
   product: Product;

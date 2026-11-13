@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { productPage } from "@/data/product-page";
-import ProductHero from "@/components/product/hero";
-import FeaturesGrid from "@/components/product/features-grid";
-import SpecsAccordions from "@/components/product/specs-accordions";
-import BestSellersSection from "@/components/product/best-sellers-section";
+import ProductHero from "@/components/pages/product/hero";
+import FeaturesGrid from "@/components/pages/product/features-grid";
+import SpecsAccordions from "@/components/pages/product/specs-accordions";
+import BestSellersSection from "@/components/pages/product/best-sellers-section";
 import Reveal from "@/components/animations/reveal";
 import type { Metadata } from "next";
 

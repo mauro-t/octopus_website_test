@@ -1,7 +1,7 @@
 import type { StoreLocatorSection } from "@/data/types";
-import Banner from "../ui/banner";
-import Button from "../ui/button";
-import Reveal from "../animations/reveal";
+import Banner from "../../ui/banner";
+import Button from "../../ui/button";
+import Reveal from "../../animations/reveal";
 
 type Props = {
   section: StoreLocatorSection;

@@ -1,6 +1,6 @@
 import type { ExploreAllSection } from "@/data/types";
-import CategoryCard from "../ui/category-card";
-import Reveal from "../animations/reveal";
+import CategoryCard from "../../ui/category-card";
+import Reveal from "../../animations/reveal";
 
 type Props = {
   section: ExploreAllSection;

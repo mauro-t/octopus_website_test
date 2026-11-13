@@ -1,6 +1,6 @@
-import Reveal from "../animations/reveal";
-import Heading from "../ui/heading";
-import ResponsiveVideo from "../ui/responsive-video";
+import Reveal from "../../animations/reveal";
+import Heading from "../../ui/heading";
+import ResponsiveVideo from "../../ui/responsive-video";
 import type { HomepageHeroSection } from "@/data/types";
 
 type Props = {

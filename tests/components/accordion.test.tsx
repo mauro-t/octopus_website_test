@@ -2,7 +2,7 @@ import type {} from "vite-plus/test/browser";
 import { expect, test } from "vite-plus/test";
 import { userEvent } from "vite-plus/test/browser";
 import { render } from "vitest-browser-react";
-import SpecsAccordions from "../../components/product/specs-accordions";
+import SpecsAccordions from "../../components/pages/product/specs-accordions";
 
 const specs = [{ title: "Technical specifications", items: ["Power: 1000 W"] }];
 
