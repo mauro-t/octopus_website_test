@@ -172,7 +172,7 @@ const SmVariant = (props: Props) => {
     <article
       className={twMerge(
         clsx(
-          "rounded-card bg-primary flex aspect-2/3 min-h-[457px] flex-col items-center justify-between gap-16 overflow-hidden",
+          "rounded-card bg-primary flex aspect-2/3 flex-col items-center justify-between gap-16 overflow-hidden",
           classes.card,
           props.fillHeight && "desktop:aspect-auto desktop:h-full desktop:grid-rows-1",
         ),
